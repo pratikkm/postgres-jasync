@@ -1,0 +1,31 @@
+micronaut:
+  application:
+    name: jasync
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/test
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: pratik
+#    dialect: POSTGRES
+
+jasync:
+  client:
+    port: 5432
+    host: localhost
+    database: test
+    username: postgres
+    password: pratik
+    maxActiveConnections: 5
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+      clean-schema: true
+#      url: jdbc:postgresql://localhost:5432/test
+#      user: postgres
+#      password: pratik
+      schemas: public
+      default-schema: public
